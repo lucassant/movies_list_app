@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:ifood_flutter_exam/core/data/services/dio_http_service.dart';
-import 'package:ifood_flutter_exam/core/domain/services/http_service.dart';
-import 'package:ifood_flutter_exam/features/movies_list/external/datasources/get_movies_datasource_imp.dart';
+import 'package:ifood_flutter_exam/core/external/dio_http_service.dart';
+import 'package:ifood_flutter_exam/core/infra/http_service.dart';
+import 'package:ifood_flutter_exam/features/movies_list/external/datasources/get_movies_remote_datasource_imp.dart';
 import 'package:ifood_flutter_exam/features/movies_list/infra/datasources/get_movies_datasource.dart';
 
 main() {
@@ -10,7 +10,7 @@ main() {
 
   setUp(() {
     dio = DioHttpService();
-    dataSource = GetMoviesDatasourceImp(httpService: dio);
+    dataSource = GetMoviesRemoteDatasourceImp(httpService: dio);
   });
 
   group('getMoviesDatasource:', () {

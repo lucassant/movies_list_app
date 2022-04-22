@@ -4,10 +4,10 @@ import 'package:ifood_flutter_exam/core/domain/usecases/usecase.dart';
 import 'package:ifood_flutter_exam/features/movies_list/domain/entities/movie_entity.dart';
 import 'package:ifood_flutter_exam/features/movies_list/domain/repositories/movies_list_repository.dart';
 
-class GetMoviesUsecaseImp implements UseCase<MovieEntity, NoParams> {
+class GetMoviesUsecase implements UseCase<MovieEntity, NoParams> {
   final MoviesListRepository moviesListRepository;
 
-  GetMoviesUsecaseImp({required this.moviesListRepository});
+  GetMoviesUsecase({required this.moviesListRepository});
 
   @override
   Future<Either<Failure, MovieEntity>> call(NoParams params) async {

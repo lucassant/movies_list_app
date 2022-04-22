@@ -15,13 +15,13 @@ import 'get_movies_usecase_test.mocks.dart';
 
 @GenerateMocks([MoviesListRepository])
 void main() {
-  late GetMoviesUsecaseImp getMoviesUsecase;
+  late GetMoviesUsecase getMoviesUsecase;
   late MockMoviesListRepository moviesListRepository;
 
   setUp(() {
     moviesListRepository = MockMoviesListRepository();
     getMoviesUsecase =
-        GetMoviesUsecaseImp(moviesListRepository: moviesListRepository);
+        GetMoviesUsecase(moviesListRepository: moviesListRepository);
   });
 
   group('getMoviesUsecase:', () {
