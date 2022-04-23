@@ -1,7 +1,8 @@
-import 'package:ifood_flutter_exam/core/domain/usecases/usecase.dart';
-import 'package:ifood_flutter_exam/features/movies_list/domain/entities/movie_entity.dart';
-import 'package:ifood_flutter_exam/features/movies_list/domain/usecases/get_movies_usecase.dart';
 import 'package:mobx/mobx.dart';
+
+import '../../../../core/domain/usecases/usecase.dart';
+import '../../domain/entities/movie_entity.dart';
+import '../../domain/usecases/get_movies_usecase.dart';
 
 part 'movies_list_store.g.dart';
 

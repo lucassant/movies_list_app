@@ -1,8 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:ifood_flutter_exam/core/domain/error/failures.dart';
-import 'package:ifood_flutter_exam/core/domain/usecases/usecase.dart';
-import 'package:ifood_flutter_exam/features/movies_list/domain/entities/movie_entity.dart';
-import 'package:ifood_flutter_exam/features/movies_list/domain/repositories/movies_list_repository.dart';
+
+import '../../../../core/domain/error/failures.dart';
+import '../../../../core/domain/usecases/usecase.dart';
+import '../entities/movie_entity.dart';
+import '../repositories/movies_list_repository.dart';
 
 class GetMoviesUsecase implements UseCase<MovieEntity, NoParams> {
   final MoviesListRepository moviesListRepository;

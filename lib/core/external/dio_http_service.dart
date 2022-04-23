@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:ifood_flutter_exam/core/utils/api_utils.dart';
 
 import '../infra/http_service.dart';
+import '../utils/api_utils.dart';
 
 class DioHttpService implements HttpService {
   late Dio _dio;

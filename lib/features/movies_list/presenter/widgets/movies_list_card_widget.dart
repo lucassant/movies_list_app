@@ -1,7 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:ifood_flutter_exam/core/utils/api_utils.dart';
-import 'package:ifood_flutter_exam/features/movies_list/domain/entities/movie_details_entity.dart';
 
+import '../../../../core/utils/api_utils.dart';
+import '../../domain/entities/movie_details_entity.dart';
 import '../pages/movie_details_page.dart';
 
 class MoviesListCardWidget extends StatelessWidget {
@@ -30,9 +31,13 @@ class MoviesListCardWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
                 child: Hero(
                   tag: movie.id,
-                  child: Image.network(
-                    API.imageURL + movie.posterPath,
+                  child: CachedNetworkImage(
+                    imageUrl: API.imageURL + movie.posterPath,
                     width: 70,
+                    placeholder: (context, url) =>
+                        const CircularProgressIndicator(),
+                    errorWidget: (context, url, error) =>
+                        Image.asset('assets/placeholder.png'),
                   ),
                 ),
               ),
@@ -65,7 +70,7 @@ class MoviesListCardWidget extends StatelessWidget {
                       height: 8,
                     ),
                     Text(
-                      'Popularity: ${movie.popularity}',
+                      'Popularity: ${movie.popularity.ceil()}',
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 12,

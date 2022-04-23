@@ -3,3 +3,5 @@ abstract class Failure {
 }
 
 class ServerFailure implements Failure {}
+
+class LocalCacheFailure implements Failure {}

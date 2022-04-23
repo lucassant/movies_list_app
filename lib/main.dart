@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:ifood_flutter_exam/features/movies_list/movies_list_module.dart';
-import 'package:ifood_flutter_exam/features/movies_list/presenter/pages/movies_list_page.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+
 import 'package:provider/provider.dart';
 
-void main() {
+import 'features/movies_list/movies_list_module.dart';
+import 'features/movies_list/presenter/pages/movies_list_page.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Hive.initFlutter();
+  await Hive.openBox<Map>('movies');
+
   runApp(const MyApp());
 }
 

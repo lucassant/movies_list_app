@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ifood_flutter_exam/features/movies_list/domain/usecases/get_movies_usecase.dart';
-import 'package:ifood_flutter_exam/features/movies_list/presenter/stores/movies_list_store.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:ifood_flutter_exam/features/movies_list/presenter/widgets/movies_list_card_widget.dart';
+
 import 'package:provider/provider.dart';
+
+import '../../domain/usecases/get_movies_usecase.dart';
+import '../stores/movies_list_store.dart';
+import '../widgets/movies_list_card_widget.dart';
 
 class MoviesListPage extends StatefulWidget {
   const MoviesListPage({Key? key}) : super(key: key);

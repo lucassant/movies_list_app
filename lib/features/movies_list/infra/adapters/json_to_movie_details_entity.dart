@@ -1,4 +1,4 @@
-import 'package:ifood_flutter_exam/features/movies_list/domain/entities/movie_details_entity.dart';
+import '../../domain/entities/movie_details_entity.dart';
 
 class JsonToMovieDetailsEntity {
   static MovieDetailsEntity fromMap(dynamic map) {
